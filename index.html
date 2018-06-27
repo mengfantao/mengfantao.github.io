@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
+<title>爱你直到永远</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<audio src="cutey.mp3"  autoplay></audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">我要把你揉进我怀里</span><br />
+            <span class="comments">把你做进我梦里</span><br />
+			 <span class="comments">然后靠一个吻</span><br />
+              <span class="comments">缝补这距离</span><br />
+               <span class="comments">我一定要拥有你</span><br />
+                <span class="comments">是我最亲爱的你</span><br />
+                 <span class="comments">给你一整首情诗</span><br />
+                  <span class="comments">关于你温暖名字</span><br />
+                   <span class="comments">在每个孑然的深夜为你诵读</span><br />
+                    <span class="comments">字句真诚而坚固</span><br />
+                     <span class="comments">星辰也为你祝福</span><br />
+                      <span class="comments">一想你</span><br />
+                      <span class="comments">梦就溢满温度</span><br />
+                       <span class="comments">同是万物生长的命理</span><br />
+                        <span class="comments">为何你如此清丽</span><br />
+                         <span class="comments">一念你</span><br />
+                          <span class="comments">心就分崩离析</span><br />
+                           <span class="comments">你是我</span><br />
+                            <span class="comments">可爱女人</span><br />
+                            
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					晶晶，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 涛</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+
+var together =new Date( 2017, 11, 9, 21, 16, 0)
+
+
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+
+</div>
+</body>
+</html>
